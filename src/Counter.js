@@ -1,6 +1,6 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { increment, decrement } from './actions';
+import { connect } from 'react-redux';
 
 class Counter extends React.Component {
   // state = { count: 0 };  //removed; state is in store now
@@ -10,16 +10,16 @@ class Counter extends React.Component {
       count: this.state.count + 1,
     }); */
     // this.props.dispatch({ type: INCREMENT });    //dispatch function from actions instead of scripted here in reducer
-    // this.props.dispatch(increment());    //call functions from imported dispatch
-    this.props.increment(); // call functions from imported dispatch mapped to props!
+    //this.props.dispatch(increment());    //call functions from imported dispatch
+    this.props.increment(); //call functions from imported dispatch mapped to props!
   };
 
   decrement = () => {
     /* this.setState({
       count: this.state.count - 1,
     }); */
-    // this.props.dispatch({ type: DECREMENT });
-    // this.props.dispatch(decrement());
+    //this.props.dispatch({ type: DECREMENT });
+    //this.props.dispatch(decrement());
     this.props.decrement();
   };
 
@@ -30,7 +30,7 @@ class Counter extends React.Component {
         <h2>Counter</h2>
         <div>
           <button onClick={this.decrement}>-</button>
-          <span className="count">{this.props.count}</span>
+          <span className="count"> Count: {this.props.count} </span>
           <button onClick={this.increment}>+</button>
         </div>
       </div>
@@ -50,5 +50,5 @@ const mapDispatchToProps = {
 };
 
 // export default Counter;   //instead of simply exporting counter, export redux-connected counter
-// export default connect(mapStateToProps)(Counter);
-export default connect(mapStateToProps, mapDispatchToProps)(Counter); // export redux-connected counter with state, dispatch inside props
+//export default connect(mapStateToProps)(Counter);
+export default connect(mapStateToProps, mapDispatchToProps)(Counter); //export redux-connected counter with state, dispatch inside props

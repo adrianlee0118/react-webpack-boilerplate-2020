@@ -1,5 +1,7 @@
 import { createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk'; // imported wherever store is implemented to enable action creator functions for fetching data (API calls etc.)
 import reducer from './reducer';
+import thunk from 'redux-thunk'; //imported wherever store is implemented to enable action creator functions for fetching data (API calls etc.)
 
-export default store = createStore(reducer, applyMiddleware(thunk));
+const store = createStore(reducer, applyMiddleware(thunk));
+
+export default store;
