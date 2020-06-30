@@ -4,7 +4,7 @@ const initialstate = {
   count: 0,
 };
 
-export const reducer = (state = initialstate, action) => {
+export default reducer = (state = initialstate, action) => {
   switch (action.type) {
     case INCREMENT:
       return {
