@@ -2,28 +2,17 @@ import React from 'react';
 import { increment, decrement } from './actions';
 import { connect } from 'react-redux';
 
+//Class that access the global state
 class Counter extends React.Component {
-  // state = { count: 0 };  //removed; state is in store now
-
+  //Functions: send dispatch requests (as outlined in actions) to reducer functions
   increment = () => {
-    /* this.setState({     //from react without redux; state is not in store
-      count: this.state.count + 1,
-    }); */
-    // this.props.dispatch({ type: INCREMENT });    //dispatch function from actions instead of scripted here in reducer
-    //this.props.dispatch(increment());    //call functions from imported dispatch
-    this.props.increment(); //call functions from imported dispatch mapped to props!
+    this.props.increment();
   };
 
   decrement = () => {
-    /* this.setState({
-      count: this.state.count - 1,
-    }); */
-    //this.props.dispatch({ type: DECREMENT });
-    //this.props.dispatch(decrement());
     this.props.decrement();
   };
 
-  // this.state.count -> this.props.count; global state in redux store, render by passing as props to component
   render() {
     return (
       <div className="counter">
@@ -38,17 +27,15 @@ class Counter extends React.Component {
   }
 }
 
-// Connect this component to count property in redux store global state
+// Connect this component to count property in redux store global state; call with this.props.count instead of this.state.count with Counter as a class in plain React
 const mapStateToProps = (state) => ({
   count: state.count,
 });
 
-// Add dispatch keys to props in addition to state
+// Add dispatch keys to props in addition to state - can call this.props.function() instead of this.props.dispatch(function())
 const mapDispatchToProps = {
   increment,
   decrement,
 };
 
-// export default Counter;   //instead of simply exporting counter, export redux-connected counter
-//export default connect(mapStateToProps)(Counter);
-export default connect(mapStateToProps, mapDispatchToProps)(Counter); //export redux-connected counter with state, dispatch inside props
+export default connect(mapStateToProps, mapDispatchToProps)(Counter);

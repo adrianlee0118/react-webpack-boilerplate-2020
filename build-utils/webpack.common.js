@@ -40,7 +40,8 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      title: 'React-Redux Table Widget',
+      title:
+        'React-Redux Webpack Base 2020 with Babel, ESLint (Airbnb/Prettier blend), Thunk, Environment variables',
       template: './src/index.html',
     }),
     new CleanWebpackPlugin(),
