@@ -10,11 +10,14 @@
   "keywords": [
     "react",
     "redux",
-    "table",
-    "webpack"
+    "webpack",
+    "thunk",
+    "babel",
+    "eslint",
+    "2020"
   ],
   "author": "Adrian Lee",
-  "license": "ISC",
+  "license": "GNU",
   "devDependencies": {
     "@babel/core": "^7.10.3",
     "@babel/plugin-proposal-class-properties": "^7.10.4",
@@ -59,5 +62,5 @@
     "url": "https://github.com/adrianlee0118/table-widget/issues"
   },
   "homepage": "https://github.com/adrianlee0118/table-widget#readme",
-  "description": "table widget built in react-redux for presenting data"
+  "description": "boilerplate set up for react-redux projects with webpack in 2020 including ESLint formatting, Babel"
 }
