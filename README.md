@@ -10,7 +10,7 @@ A simple working React-Redux example with store, actions, reducer and index.js c
 
 Clone or download and then run `npm install`.
 
-Rename the project as desired BEFORE you initialize the git repository.
+Rename the project as desired BEFORE you initialize your local git repository.
 
 Replace src files with your own or edit existing files/re-arrange folder structure (if you use the existing project structure you can leave store.js and index.js almost untouched--might need to tweak the component names to match your own).
 
