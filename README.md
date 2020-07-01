@@ -10,7 +10,9 @@ A simple working React-Redux example with store, actions, reducer and index.js c
 
 Clone or download and then run `npm install`.
 
-Replace src files with your own or edit existing files/re-arrange folder structure.
+Rename the project as desired BEFORE you initialize the git repository.
+
+Replace src files with your own or edit existing files/re-arrange folder structure (if you use the existing project structure you can leave store.js and index.js almost untouched--might need to tweak the component names to match your own).
 
 ESLint issues can be fixed by running `eslint --fix src/<filename.js>`.
 
